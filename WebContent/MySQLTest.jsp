@@ -24,10 +24,12 @@ try {
 	}
 
 	out.println("<p>도시이름</p>");
+	out.println("<table>");
 	while (rs.next()) {
 		String str = rs.getString(1);
-		out.println(str + "<br />");
+		out.println("<tr><td>" + str + "</td></tr>");
 	}
+	out.println("</table>");
 } catch (SQLException sqex) {
 	out.println("SQLException: " + sqex.getMessage());
 	out.println("SQLState: " + sqex.getSQLState());
